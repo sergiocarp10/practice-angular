@@ -2,9 +2,7 @@
 
     <div class="nav-header-left">
         <!-- acá insertaríamos el logo -->
-        <a href="#" class="text-link">Historial</a>
-        <a href="#" class="text-link">Resumen</a>
-        <a href="#" class="text-link">Líneas</a>
+        <a href="#" class="text-link" *ngFor="let tab of tabs">{{tab}}</a>
     </div>
 
     <div class="nav-header-right">

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-header.component.css']
 })
 export class NavHeaderComponent {
-
+  tabs = ['Historial', 'Recorridos', 'Líneas']
 }
