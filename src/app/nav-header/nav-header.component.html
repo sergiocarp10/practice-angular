@@ -1,19 +1,19 @@
 <div class="nav-header">
 
     <div class="nav-header-left">
-        <a href="#">
+        <a routerLink="/">
             <img src="assets/bus-alert.svg" alt="">
         </a>
-        <a href="#" class="text-link" *ngFor="let tab of tabs">{{tab}}</a>
+        <a routerLink="{{tab.url}}" class="text-link" *ngFor="let tab of tabs">{{tab.displayName}}</a>
     </div>
 
     <div class="nav-header-right">
-        <a href="#" class="link-with-image">
+        <a routerLink="/games" class="link-with-image">
             <img src="assets/dice.svg" alt="" style="width: 30px;">
             <div>Minijuegos</div>
         </a>
-        <a href="#" class="circular-button white-btn">Iniciar sesión</a>
-        <a href="#" class="circular-button black-btn">Registrarse</a>
+        <a routerLink="/account/login" class="circular-button white-btn">Iniciar sesión</a>
+        <a routerLink="/account/register" class="circular-button black-btn">Registrarse</a>
     </div>
 
 </div>
