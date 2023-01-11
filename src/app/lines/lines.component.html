@@ -1,1 +1,17 @@
-<p>lines works!</p>
+<div class="content gradient-green">
+    <h1 class="title">Mis líneas de colectivo</h1>
+
+    <div class="lines-list">
+        <!-- Usar un ngFor es mucho más fácil que crear cada elemento desde JavaScript -->
+        <div class="line-item" *ngFor="let line of lines" [ngStyle]="{ 'background-color': line.color }">
+            <p style="margin: 15px;">{{line.name}}</p>
+        </div>
+    </div>
+
+    <!-- submit es la acción que realiza un botón en un form, indicamos la función a llamar -->
+    <form (submit)="addLine(lineInput)">
+        <!-- mediante # indicamos que es una variable que se puede obtener -->
+        <input type="text" #lineInput>
+        <button class="circular-button" id="add-button">Agregar</button>
+    </form>
+</div>
