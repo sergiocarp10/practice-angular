@@ -11,7 +11,6 @@
     flex-direction: row;
     gap: 30px;
     align-items: center;
-    text-transform: uppercase;
 }
 
 .nav-header-right {
@@ -21,13 +20,7 @@
     align-items: center;
 }
 
-.text-link {
-    font-weight: bold;
-}
 
-.text-link:hover {
-    color: pink
-}
 
 .link-with-image {
     display: flex;

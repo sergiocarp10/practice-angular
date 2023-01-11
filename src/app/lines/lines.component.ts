@@ -32,10 +32,10 @@ export class LinesComponent {
     return false
   }
 
-  deleteLine(str: string){
+  deleteLine(line: Line){
     for (let i = 0; i < this.lines.length; i++) {
       const element: Line = this.lines[i];
-      if (element.name == str) this.lines.splice(i, 1)
+      if (element == line) this.lines.splice(i, 1)
     }
   }
 }
