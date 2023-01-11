@@ -3,9 +3,15 @@
     <link href="//db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold" rel="stylesheet" type="text/css"/>
 </head>
 
-<!-- Permite mostrar el componente adecuado según la url -->
+<!-- Elementos que se verán en todas las páginas o pantallas -->
+
+<!-- Arriba de todo, el header de navegación -->
+<app-nav-header></app-nav-header>
+
+<!-- En el medio, el componente indicado por la ruta -->
 <router-outlet></router-outlet>
 
+<!-- Abajo de todo, el copyright -->
 <footer style="margin-top: 35px; color: gray;">
     <p style="text-align: center;">(C) 2023, Calderón Sergio. Hecho con Angular. Las imágenes presentes en esta página pertenecen a sus respectivos dueños</p>
 </footer>
