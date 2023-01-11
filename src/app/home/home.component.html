@@ -1,2 +1,23 @@
 <app-nav-header></app-nav-header>
-<h1>This is home screen</h1>
+
+<!-- content of main screen -->
+<div class="content">
+    <div class="feature" *ngFor="let feature of features">
+        <div class="feature-op1 {{feature.gradientClass}}" *ngIf="feature.imageLeft == true">
+            <img class="feature-img" src="{{feature.imageUrl}}" alt="">
+            <div class="feature-info ">
+                <h1 class="feature-title">{{feature.title}}</h1>
+                <p class="feature-description">{{feature.description}}</p>
+                <a routerLink="" class="circular-button transparent-btn" >{{feature.buttonText}}</a>
+            </div>
+        </div>
+        <div class="feature-op2 {{feature.gradientClass}}" *ngIf="feature.imageLeft == false">
+            <div class="feature-info ">
+                <h1 class="feature-title">{{feature.title}}</h1>
+                <p class="feature-description">{{feature.description}}</p>
+                <a routerLink="" class="circular-button transparent-btn" >{{feature.buttonText}}</a>
+            </div>
+            <img class="feature-img" src="{{feature.imageUrl}}" alt="">
+        </div>
+    </div>
+</div>

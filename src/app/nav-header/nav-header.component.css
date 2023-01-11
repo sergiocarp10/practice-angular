@@ -1,14 +1,9 @@
-a {
-    text-decoration: none;
-    color: white;
-}
 
 .nav-header {
-    background-color: green;
+    background-color: rgb(200, 0, 0);
     padding: 10px 32px;
     display: flex;
     justify-content: space-between;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .nav-header-left {
@@ -22,6 +17,7 @@ a {
 .nav-header-right {
     display: flex;
     gap: 25px;
+    font-size: 14px;
     align-items: center;
 }
 
@@ -30,7 +26,7 @@ a {
 }
 
 .text-link:hover {
-    color: greenyellow;
+    color: pink
 }
 
 .link-with-image {
@@ -42,17 +38,7 @@ a {
 }
 
 .link-with-image:hover {
-    color: greenyellow;
-}
-
-.circular-button {
-    background-color: none;
-    border-radius: 20px;
-    border-color: black;
-    border-style: solid;
-    padding: 5px 12px;
-    font-weight: bold;
-    min-height: 22px;
+    color: pink;
 }
 
 .white-btn {
@@ -61,7 +47,7 @@ a {
 }
 
 .white-btn:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .black-btn {
@@ -70,5 +56,5 @@ a {
 }
 
 .black-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
 }
