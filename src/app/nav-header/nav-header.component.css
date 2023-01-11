@@ -16,6 +16,7 @@ a {
     flex-direction: row;
     gap: 30px;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .nav-header-right {
@@ -25,11 +26,22 @@ a {
 }
 
 .text-link {
-    text-transform: uppercase;
     font-weight: bold;
 }
 
 .text-link:hover {
+    color: greenyellow;
+}
+
+.link-with-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.link-with-image:hover {
     color: greenyellow;
 }
 
@@ -58,5 +70,5 @@ a {
 }
 
 .black-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
 }
