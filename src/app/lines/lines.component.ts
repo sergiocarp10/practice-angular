@@ -28,7 +28,12 @@ export class LinesComponent {
   }
 
   changeColor(line: Line){
-    line.color = (line.color + 1) % this.colors_available.length
+     // update variable and UI
+     line.color = (line.color + 1) % this.colors_available.length
+
+    // update on firestore
+    const index: number = this.lines.indexOf(line)
+    this.linesApi.updateLine(line, index)
   }
 
   // Atención: input es el elemento HTML del form
@@ -36,7 +41,13 @@ export class LinesComponent {
     let text = input.value.trim()
 
     if (text){
-      this.lines.push({name: text, color: 1})
+      const line: Line = {name: text, color: Math.round(Math.random() * this.colors_available.length)}
+
+      // upload to firestore
+      this.linesApi.addLine(line)
+
+      // add to UI
+      this.lines.push(line)
 
       // clear form
       input.value = ""
@@ -50,9 +61,10 @@ export class LinesComponent {
   }
 
   deleteLine(line: Line){
-    for (let i = 0; i < this.lines.length; i++) {
-      const element: Line = this.lines[i];
-      if (element == line) this.lines.splice(i, 1)
-    }
+    let index: number = this.lines.indexOf(line)
+    this.lines.splice(index, 1)
+
+    // delete on firestore
+    this.linesApi.removeLine(index)
   }
 }
