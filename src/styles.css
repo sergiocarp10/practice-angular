@@ -13,6 +13,10 @@ a {
     color: white;
 }
 
+button {
+    cursor: pointer;
+}
+
 .content {
     box-shadow: 1px 4px 15px 3px rgba(0,0,0,0.52);
     -webkit-box-shadow: 1px 4px 15px 3px rgba(0,0,0,0.52);

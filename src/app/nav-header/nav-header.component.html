@@ -12,8 +12,21 @@
             <img src="assets/dice.svg" alt="" style="width: 30px;">
             <div>Minijuegos</div>
         </a>
-        <a routerLink="/account/login" class="circular-button white-btn">Iniciar sesión</a>
-        <a routerLink="/account/register" class="circular-button black-btn">Registrarse</a>
+
+        <div class="nav-account-options" *ngIf="user == null && ready == true">
+            <a routerLink="/account/login" class="circular-button white-btn">Iniciar sesión</a>
+            <a routerLink="/account/register" class="circular-button black-btn">Registrarse</a>
+        </div>
+
+        <div class="nav-account-options" *ngIf="user != null">
+            <div class="nav-account-info">
+                <img src="assets/face.svg" alt="" style="width: 30px; height: 30px;">
+                <p>{{user.email}}</p>
+            </div>
+           
+            <button class="circular-button white-btn" (click)="logout()">Cerrar sesión</button>
+        </div>
+        
     </div>
 
 </div>

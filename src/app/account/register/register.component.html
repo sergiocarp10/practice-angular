@@ -1,0 +1,13 @@
+<div class="content gradient-yellow">
+    <h1>Registrarse</h1>
+
+    <div style="width: 100%; justify-content: center; display: flex;">
+        <img src="assets/face.svg" alt="" style="width: 10%">
+    </div>
+
+    <form class="register-form" (submit)="onSubmit(username, password)">
+        <input type="text" name="user" placeholder="Email" #username>
+        <input type="password" name="password" placeholder="Contraseña" #password>
+        <button class="circular-button">Continuar</button>
+    </form>
+</div>

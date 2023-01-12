@@ -20,7 +20,19 @@
     align-items: center;
 }
 
+.nav-account-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    margin-right: 20px;
+}
 
+.nav-account-options {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
 
 .link-with-image {
     display: flex;

@@ -1,0 +1,14 @@
+<div class="content gradient-green">
+    <h1>Iniciar sesión</h1>
+
+    <div style="width: 100%; justify-content: center; display: flex;">
+        <img src="assets/face.svg" alt="" style="width: 10%">
+    </div>
+    
+
+    <form class="register-form" (submit)="onSubmit(email, password)">
+        <input type="text" name="user" placeholder="Email" #email>
+        <input type="password" name="password" placeholder="Contraseña" #password>
+        <button class="circular-button">Continuar</button>
+    </form>
+</div>
