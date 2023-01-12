@@ -9,6 +9,7 @@ import { RouterModule, Route } from "@angular/router";
 import { firebaseConfig } from './firebase/FirebaseConfig';
 import { initializeApp, provideFirebaseApp } from "@angular/fire/app";
 import { getAuth, provideAuth } from "@angular/fire/auth";
+import { getFirestore, provideFirestore } from "@angular/fire/firestore";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +21,6 @@ import { MonthSummaryComponent } from './month-summary/month-summary.component';
 import { GamesComponent } from './games/games.component';
 import { LoginComponent } from './account/login/login.component';
 import { RegisterComponent } from './account/register/register.component';
-import { UserService } from './user.service';
 
 // my routes
 const routes: Route[] = [
@@ -51,7 +51,8 @@ const routes: Route[] = [
     RouterModule.forRoot(routes),
     // firebase 9
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [  ],
   bootstrap: [AppComponent]

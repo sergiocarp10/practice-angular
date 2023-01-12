@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { FirebaseError } from 'firebase/app';
-import { onAuthStateChanged, signOut, User } from 'firebase/auth';
+import { signOut, User } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LinesApiService } from '../lines-api.service';
 import { Line } from "./Line";
 
 @Component({
@@ -15,8 +16,11 @@ export class LinesComponent {
     "rgba(150, 150, 0, 0.7)", "rgba(0, 150, 150, 0.7)", "rgba(150, 0, 150, 0.7)"
   ]
 
-  constructor(){
-    
+  constructor(private linesApi: LinesApiService){
+    // get from firestore
+    linesApi.getLines().then((docs) => {
+      docs.forEach(doc => this.lines.push(doc.data()))
+    })
   }
 
   getColor(num: number){
