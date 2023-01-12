@@ -1,4 +1,4 @@
 export interface Line {
     "name": string
-    "color": string
+    "color": number
 }

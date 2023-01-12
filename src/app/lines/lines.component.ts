@@ -10,8 +10,21 @@ export class LinesComponent {
   lines: Line[] = [];
   default_color: string = "rgba(0, 150, 0, 0.7)"
 
+  colors_available: string[] = [
+    "rgba(150, 0, 0, 0.7)", "rgba(0, 150, 0, 0.7)", "rgba(0, 0, 150, 0.7)",
+    "rgba(150, 150, 0, 0.7)", "rgba(0, 150, 150, 0.7)", "rgba(150, 0, 150, 0.7)"
+  ]
+
   constructor(){
     
+  }
+
+  getColor(num: number){
+    return this.colors_available[num]
+  }
+
+  changeColor(line: Line){
+    line.color = (line.color + 1) % this.colors_available.length
   }
 
   // Atención: input es el elemento HTML del form
@@ -19,7 +32,7 @@ export class LinesComponent {
     let text = input.value.trim()
 
     if (text){
-      this.lines.push({name: text, color: this.default_color})
+      this.lines.push({name: text, color: 1})
 
       // clear form
       input.value = ""

@@ -3,7 +3,7 @@
 
     <div class="lines-list">
         <!-- Usar un ngFor es mucho más fácil que crear cada elemento desde JavaScript -->
-        <div class="line-item" *ngFor="let line of lines" [ngStyle]="{ 'background-color': line.color }">
+        <div class="line-item" *ngFor="let line of lines" (click)="changeColor(line)" [ngStyle]="{ 'background-color': getColor(line.color) }">
             <p style="margin: 15px;">{{line.name}}</p>
             <a class="text-link" (click)="deleteLine(line)">Borrar</a>
         </div>
