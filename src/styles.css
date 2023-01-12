@@ -49,6 +49,7 @@ a {
 .text-link {
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .text-link:hover {

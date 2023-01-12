@@ -50,6 +50,7 @@ input {
     border-color: green;
     border-width: 2px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 #add-button:hover {
